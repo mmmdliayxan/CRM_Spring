@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Registration Form in HTML CSS</title>
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="" th:href="@{css/customerRegister.css}"/>
+</head>
+<body>
+<div class="main">
+    <div class="container2">
+        <div>
+        </div>
+        <div class="d1">
+            <a th:href="@{/}">
+                <button type="button" class="btn" style="margin-right:10px;font-size:15px;width: 80px; height: 30px;background-color: #374bc9; color: white">Logout</button>
+            </a>
+        </div>
+    </div>
+    <div class="container_form">
+        <section class="container">
+            <header>Customer Registration Form</header>
+            <form th:action="@{/customerRegister}" class="form" method="post">
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>First Name</label>
+                        <input name="firstName" type="text" placeholder="Enter first name" required />
+                    </div>
+                    <div class="input-box">
+                        <label>Last Name</label>
+                        <input name="lastName" type="text" placeholder="Enter last name" required />
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label>Email Address</label>
+                    <input name="email" type="text" placeholder="Enter email address" required />
+                </div>
+
+                <div class="column">
+                    <div class="input-box">
+                        <label>Phone Number</label>
+                        <input name="phoneNumber" type="number" placeholder="Enter phone number" required />
+                    </div>
+                    <div class="input-box">
+                        <label>Age</label>
+                        <input name="age" type="text" placeholder="Enter your age" required />
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="marital_status">Are you married?</label>
+                    <select name="maritalStatus" id="marital_status">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="educational_degree">What is your education degree?</label>
+                    <select name="educationDegree" id="educational_degree">
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="Master">Master</option>
+                        <option value="Doctoral">Doctoral</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <div class="input-box2">
+                        <label for="university">University</label>
+                        <select name="university" id="university">
+                            <option value="BMU">BMU</option>
+                            <option value="ADNSU">ADNSU</option>
+                            <option value="BANM">BANM</option>
+                            <option value="AzTU">AzTU</option>
+                            <option value="AZMIU">AZMIU</option>
+                            <option value="BDU">BDU</option>
+                            <option value="UNEC">UNEC</option>
+                        </select>
+                    </div>
+                    <div class="input-box2">
+                        <label>Speciality</label>
+                        <input name="speciality" type="text" placeholder="Enter your Speciality" required />
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="job_status">Are you working?</label>
+                    <select name="jobStatus" id="job_status">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="input-box2">
+                    <label>Job</label>
+                    <input name="job" type="text" placeholder="Enter your job"/>
+                </div>
+                <div class="input-box2">
+                    <label for="course_program">Which course do you want to study?</label>
+                    <select name="courseProgram" id="course_program">
+                        <option value="SQL">SQL</option>
+                        <option value="BACKEND">BACKEND</option>
+                        <option value="FRONTEND">FRONTEND</option>
+                        <option value="DATA SCIENCE">DATA SCIENCE</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="knowledge">Do you have knowledge about this course?</label>
+                    <select name="knowledge" id="knowledge">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="hours">Which hour is suitable for you?</label>
+                    <select name="hours" id="hours">
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                        <option value="Night">Night</option>
+                    </select>
+                </div>
+                <div class="gender-box">
+                    <h3>Gender</h3>
+                    <div class="gender-option">
+                        <div class="gender">
+                            <input type="radio" id="check-male" name="gender" value="MALE" checked />
+                            <label for="check-male">male</label>
+                        </div>
+                        <div class="gender">
+                            <input  type="radio" id="check-female" value="FEMALE" name="gender" />
+                            <label for="check-female">female</label>
+                        </div>
+                        <div class="gender">
+                            <input type="radio" id="check-other" name="gender" value="OTHER" />
+                            <label for="check-other">other</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-box address">
+                    <label>Address</label>
+                    <input name="address" type="text" placeholder="Enter street address" required />
+                </div>
+                <button>Submit</button>
+            </form>
+        </section>
+    </div>
+</div>
+</body>
+</html>
